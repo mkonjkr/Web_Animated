@@ -1,0 +1,157 @@
+/* body {
+    font-family: "Hind", sans-serif;
+}
+
+.page-wrapper {
+    height: 100vh;
+    width: 100%;
+    background: #eee;
+    padding: 0 100px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    position: relative;
+}
+
+.project-list {
+    mix-blend-mode: difference;
+    z-index: 1;
+    &:hover {
+        .project-title{
+            opacity: 0.1;
+        }
+    }
+    
+    .project-item {
+        display: inline-block;
+        margin-right: 50px;
+        font-size: 40px;
+        
+
+        &:last-of-type {
+            margin-right: 0;
+            .project-title:after {
+                content: "";
+            }
+        }
+
+        .project-title {
+            z-index: 2;
+            color: #eee;
+            &:after{ 
+                content: ",";
+            }
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.project-media {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+        opacity: 0;
+        position: absolute;
+        width: auto;
+        height: auto;
+        max-width: 50%;
+        max-height: 40%;
+        object-fit: contain;
+
+        &.is-active {
+            opacity: 1;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+} */
+
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.page-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #eee;
+}
+
+.project-list {
+    z-index: 1;
+    mix-blend-mode: difference;
+
+    &:hover {
+        .project-title {
+            opacity: 0.1;
+        }
+    }
+
+    .project-item {
+        display: inline-block;
+
+        margin-right: 20px;
+
+        &:last-of-type {
+            margin-right: 20px;
+
+            .project-title::after {
+                content: "";
+            }
+        }
+
+        .project-title {
+            z-index: 2;
+            font-size: 60px;
+            font-weight: 400;
+            color: #eee;
+
+            &:after {
+                content: ",";
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+.project-media {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    img{
+        opacity: 0;
+        position: absolute;
+        width: auto;
+        height: auto;
+        max-width: 50%;
+        max-height: 40%;
+
+        &.is-active {
+            opacity: 1;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
